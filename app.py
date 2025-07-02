@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse # Opcional, para servir o index.html na raiz
 from fastapi.middleware.cors import CORSMiddleware # Certifique-se de que esta linha está aqui
 from database import engine, Base
 from routers.alunos import alunos_router
@@ -40,3 +41,9 @@ app.add_middleware(
 app.include_router(alunos_router, tags=["alunos"])
 app.include_router(cursos_router, tags=["cursos"])
 app.include_router(matriculas_router, tags=["matriculas"])
+
+@app.get("/", response_class=HTMLResponse)
+async def read_root():
+    with open("templates/index.html", "r", encoding="utf-8") as f:
+        content = f.read()
+    return HTMLResponse(content=content, media_type="text/html; charset=utf-8")
