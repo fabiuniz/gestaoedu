@@ -41,7 +41,7 @@ def read_matriculas_por_nome_aluno(nome_aluno: str, db: Session = Depends(get_db
         raise HTTPException(status_code=404, detail=f"O aluno '{nome_aluno}' não possui matrículas cadastradas.")
 
     return {"aluno": db_aluno.nome, "cursos": cursos_matriculados}
-
+# Matrículas por Curso
 @matriculas_router.get("/matriculas/curso/{codigo_curso}", response_model=Dict[str, Union[str, List[str]]])
 def read_alunos_matriculados_por_codigo_curso(codigo_curso: str, db: Session = Depends(get_db)):
     """Retorna o nome do curso e uma lista com os nomes dos alunos matriculados."""
