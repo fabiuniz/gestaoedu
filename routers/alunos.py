@@ -127,7 +127,7 @@ def read_aluno_por_nome(nome_aluno: str, db: Session = Depends(get_db)):
 @alunos_router.get("/alunos/email/{email_aluno}", response_model=Aluno)
 def read_aluno_por_email(email_aluno: str, db: Session = Depends(get_db)):
     """
-    Busca um aluno pelo email.
+    Busca um aluno pelo email. <----
 
     Args:
         email_aluno: O email do aluno a ser buscado.
