@@ -1,8 +1,8 @@
 <!-- 
-  Tags: DevOps,Dev,Monolíto
-  Label: Sistema de Gestão Escolar
-  Description: Descrição do projeto
-  path_hook: hookfigma.hook6,hookfigma.hook7,hookfigma.hook14
+  Tags: DevOps,Monolíto
+  Label: 📚 Sistema de Gestão Escolar
+  Description: A aplicação possui uma API backend construída com **FastAPI** e um frontend interativo desenvolvido com **React** e **Tailwind CSS**. O banco de dados é gerenciado por **SQLAlchemy** com SQLite, e a aplicação é containerizada utilizando **Docker**. Este projeto foi desenvolvido como parte da **Imersão DevOps da Alura**.
+  path_hook: hookfigma.hook18,hookfigma.hook14
 -->
 
 # Sistema de Gestão Escolar
