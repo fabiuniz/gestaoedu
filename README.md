@@ -8,7 +8,7 @@
 # 📚 Sistema de Gestão Escolar
 
 <div align="center">
-  <img src="images/gestaoedu.png" alt="Logo Sistema de Gestão Escolar" width="200"/>
+  <img src="images/gestaoedu.png" alt="Logo Sistema de Gestão Escolar"/>
   
   ![Python](https://img.shields.io/badge/python-v3.9+-blue.svg)
   ![FastAPI](https://img.shields.io/badge/FastAPI-009688.svg?style=flat&logo=FastAPI&logoColor=white)
