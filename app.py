@@ -25,8 +25,7 @@ app = FastAPI(
 origins = [
     "http://localhost", # Opcional: Se seu frontend estiver na mesma máquina em alguma porta default
     "http://localhost:8080", # **Essencial:** Adicione a URL completa do seu frontend React aqui (porta padrão do Create React App)    
-    # Você pode adicionar outras origens se o seu frontend estiver hospedado em outro lugar
-    # Por exemplo: "https://seu-dominio-frontend.com"
+    "https://api-967886725982.southamerica-east1.run.app"    
 ]
 
 app.add_middleware(
