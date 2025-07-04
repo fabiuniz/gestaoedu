@@ -119,12 +119,30 @@ gestaoedu/
    cd gestaoedu
    ```
 
-2. **Execute com Docker Compose**:
+2. **Crie um ambiente virtual:**
+   ```sh
+   python3 -m venv ./venv
+   ```
+
+3. **Ative o ambiente virtual:**
+   - No Linux/Mac:
+     ```sh
+     source venv/bin/activate
+     ```
+   - No Windows, abra um terminal no modo administrador e execute o comando:
+   ```sh
+   Set-ExecutionPolicy RemoteSigned
+   ```
+
+     ```sh
+     venv\Scripts\activate
+     ```
+4. **Execute com Docker Compose**:
    ```bash
    docker-compose up --build
    ```
 
-3. **Acesse a aplicação**:
+5. **Acesse a aplicação**:
    - Frontend: http://localhost:8000
    - Documentação da API: http://localhost:8000/docs
 
@@ -142,25 +160,14 @@ gestaoedu/
 
 ## ☁️ Deploy na Nuvem
 
-Detalhes sobre a configuração, veja o [Guia de Configuração](README_C.md).
+Detalhes sobre a configuração no cloud, veja o [Guia de Configuração](README_C.md).
 
 ### Google Cloud Run
 Baixar e instalar : https://cloud.google.com/sdk/docs/install-sdk
-1. **Configure o Google Cloud SDK**:
+Ele será usado durante a configuração para validar suas credenciais do google.
+1. **Atualizar Seu Workflow do GitHub Actions**:
+   Dentro da pasta do projeto tem esse /.github/workflows/docker-image.yml
    ```bash
-   # Windows PowerShell
-   Set-ExecutionPolicy RemoteSigned
-   gcloud auth login
-   gcloud config set project [ID_DO_PROJETO_DO_GOOGLE_CLOUD] (ID do seu projeto em: https://console.cloud.google.com/)
-   ```
-
-2. **Faça o deploy**:
-   ```bash
-   gcloud run deploy --port=8000
-   ```
-3. **Atualizar Seu Workflow do GitHub Actions**:
-   ```bash
-   # Windows PowerShell  
    name: Docker Image CI
    on:
      push:
@@ -176,6 +183,17 @@ Baixar e instalar : https://cloud.google.com/sdk/docs/install-sdk
          run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
 
    ```
+2. **Configure o Google Cloud SDK**:
+   ```bash
+   Set-ExecutionPolicy RemoteSigned
+   gcloud auth login
+   gcloud config set project [ID_DO_PROJETO_DO_GOOGLE_CLOUD] (ID do seu projeto em: https://console.cloud.google.com/)
+   ```
+
+3. **Faça o deploy**:
+   ```bash
+   gcloud run deploy --port=8000
+   ```
 4. **Configure o serviço**:
    - Service name: `api`
    - Region: `32` (South America East 1)
@@ -183,7 +201,7 @@ Baixar e instalar : https://cloud.google.com/sdk/docs/install-sdk
 ## 📚 Como Usar
 
 ### Interface Web
-1. Acesse http://localhost:8000
+1. Acesse http://localhost:8000 ou use a url fornecida ao fim após rodar o deploy.
 2. Use as abas para navegar entre as seções:
    - **Alunos**: Cadastro e gestão de estudantes
    - **Cursos**: Criação e edição de cursos
