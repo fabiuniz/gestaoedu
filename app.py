@@ -23,9 +23,9 @@ app = FastAPI(
 # Configuração do CORS
 # ---
 origins = [
+    "http://vmlinuxd:8080", # **Essencial:** Adicione a URL completa do seu frontend React aqui (porta padrão do Create React App)    
     "http://localhost", # Opcional: Se seu frontend estiver na mesma máquina em alguma porta default
     "http://localhost:8080", # **Essencial:** Adicione a URL completa do seu frontend React aqui (porta padrão do Create React App)    
-    "https://api-967886725982.southamerica-east1.run.app"    
 ]
 
 app.add_middleware(
