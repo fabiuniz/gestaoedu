@@ -36,8 +36,8 @@ O **ID do projeto** é um identificador único globalmente para o seu projeto e 
 
 1.  **Localize o ID do Projeto**: Com o seu projeto selecionado no console (você pode verificar o nome do projeto no topo da página), procure pelo **"ID do Projeto"** logo abaixo do nome do projeto. Geralmente ele aparece como um texto cinza menor.
     * Exemplo: Se o nome do seu projeto é "Alura Imersão", o ID pode ser algo como `alura-imersao-123456`.
-2.  **Copie o ID do Projeto**: Anote ou copie esse ID. Ele será usado em comandos como o `gcloud CLI`.
-3.  **Configure o Projeto no gcloud CLI (Opcional, mas recomendado)**: Se você tiver o SDK do Google Cloud instalado, pode definir o projeto padrão para seus comandos, evitando digitá-lo sempre:
+2.  **Copie o ID do Projeto**: Anote ou copie esse ID. Ele será usado em comandos como o `gcloud CLI`. (voltar a configuração principal, veja o [Guia de Configuração](README.md).)
+
     ```bash
     gcloud config set project [ID_DO_PROJETO_DO_GOOGLE_CLOUD]
     ```
@@ -57,6 +57,4 @@ Mesmo com créditos, você precisa **vincular uma conta de faturamento** ao seu 
 
 ---
 
-Agora seu projeto está criado, configurado com seus créditos e você sabe como encontrar seu ID! Você está pronto para começar a explorar os serviços do Google Cloud e fazer o deploy da sua aplicação.
-
-Se tiver alguma dúvida, sinta-se à vontade para perguntar!
+Agora seu projeto está criado, configurado com seus créditos e você sabe como encontrar seu ID! Você está pronto para começar a explorar os serviços do Google Cloud e fazer o deploy da sua aplicação, voltando para a configuração principal, veja o [Guia de Configuração](README.md). .

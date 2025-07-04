@@ -142,7 +142,7 @@ gestaoedu/
 
 ## ☁️ Deploy na Nuvem
 
-Detalhes sobre a configuração, veja nosso [Guia de Configuração](README_C.md).
+Detalhes sobre a configuração, veja o [Guia de Configuração](README_C.md).
 
 ### Google Cloud Run
 Baixar e instalar : https://cloud.google.com/sdk/docs/install-sdk
